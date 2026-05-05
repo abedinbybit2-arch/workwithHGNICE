@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>হিসাব নোট — Joynal Abedin</title>
+<title>Hisab Note — Joynal Abedin</title>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Baloo+Da+2:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
@@ -272,7 +272,7 @@ body::after{content:'';position:fixed;inset:0;z-index:0;
 
 <!-- Page loader -->
 <div id="pageLoader">
-  <div style="font-size:1.6rem;font-weight:900;letter-spacing:4px;color:#00d4ff;text-shadow:0 0 30px rgba(0,212,255,0.5);font-family:'Rajdhani',sans-serif">হিসাব<span style="color:#00ff9f">নোট</span></div>
+  <div style="font-size:1.6rem;font-weight:900;letter-spacing:4px;color:#00d4ff;text-shadow:0 0 30px rgba(0,212,255,0.5);font-family:'Rajdhani',sans-serif">HISAB<span style="color:#00ff9f">NOTE</span></div>
   <div style="width:160px;height:2px;background:rgba(0,212,255,0.1);border-radius:99px;overflow:hidden">
     <div id="loaderBar" style="height:100%;width:0;background:linear-gradient(90deg,#0080ff,#00d4ff,#00ff9f);border-radius:99px;transition:width 1s ease"></div>
   </div>
@@ -297,25 +297,25 @@ body::after{content:'';position:fixed;inset:0;z-index:0;
         <div class="auth-card">
           <div class="auth-logo">
             <div class="globe-wrap">📒</div>
-            <h1>হিসাব নোট</h1>
+            <h1>HISAB NOTE</h1>
             <p>PERSONAL FINANCE TRACKER</p>
           </div>
           <div class="auth-tabs">
-            <button class="auth-tab active" onclick="switchAuth('login')">লগইন</button>
-            <button class="auth-tab" onclick="switchAuth('register')">রেজিস্টার</button>
+            <button class="auth-tab active" onclick="switchAuth('login')">Login</button>
+            <button class="auth-tab" onclick="switchAuth('register')">Register</button>
           </div>
           <div id="login-form">
-            <div class="field"><label>ইমেইল</label><input class="inp" id="l-email" type="email" placeholder="email@example.com"/></div>
-            <div class="field"><label>পাসওয়ার্ড</label><input class="inp" id="l-pass" type="password" placeholder="পাসওয়ার্ড দিন" onkeydown="if(event.key==='Enter')doLogin()"/></div>
+            <div class="field"><label>Email</label><input class="inp" id="l-email" type="email" placeholder="email@example.com"/></div>
+            <div class="field"><label>Password</label><input class="inp" id="l-pass" type="password" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()"/></div>
             <div class="err-msg" id="l-err"></div>
-            <button class="btn btn-primary" id="l-btn" onclick="doLogin()" style="margin-top:8px">🔑 লগইন</button>
+            <button class="btn btn-primary" id="l-btn" onclick="doLogin()" style="margin-top:8px">🔑 Login</button>
           </div>
           <div id="register-form" style="display:none">
-            <div class="field"><label>আপনার নাম</label><input class="inp" id="r-name" type="text" placeholder="নাম লিখুন"/></div>
-            <div class="field"><label>ইমেইল</label><input class="inp" id="r-email" type="email" placeholder="email@example.com"/></div>
-            <div class="field"><label>পাসওয়ার্ড</label><input class="inp" id="r-pass" type="password" placeholder="কমপক্ষে ৬ অক্ষর"/></div>
+            <div class="field"><label>Your Name</label><input class="inp" id="r-name" type="text" placeholder="Enter name"/></div>
+            <div class="field"><label>Email</label><input class="inp" id="r-email" type="email" placeholder="email@example.com"/></div>
+            <div class="field"><label>Password</label><input class="inp" id="r-pass" type="password" placeholder="At least 6 characters"/></div>
             <div class="err-msg" id="r-err"></div>
-            <button class="btn btn-primary" id="r-btn" onclick="doRegister()" style="margin-top:8px">✅ রেজিস্টার</button>
+            <button class="btn btn-primary" id="r-btn" onclick="doRegister()" style="margin-top:8px">✅ Register</button>
           </div>
           <p style="text-align:center;font-size:9px;color:var(--text3);margin-top:16px;font-family:'Share Tech Mono',monospace;letter-spacing:1px">Copyright © JOYNAL ABEDIN</p>
         </div>
@@ -326,7 +326,7 @@ body::after{content:'';position:fixed;inset:0;z-index:0;
         <div class="topbar">
           <div class="topbar-logo">
             <div class="tl-icon">📒</div>
-            <span>হিসাব নোট</span>
+            <span>HISAB NOTE</span>
             <span class="topbar-badge">LIVE</span>
           </div>
           <div class="topbar-right">
@@ -335,62 +335,60 @@ body::after{content:'';position:fixed;inset:0;z-index:0;
         </div>
         <div class="content" id="main-content"></div>
         <nav class="bottom-nav">
-          <button class="nav-item active" onclick="setPage('home')" id="nav-home"><span class="ni">🏠</span><span class="nl">হোম</span></button>
-          <button class="nav-item" onclick="setPage('dilam')" id="nav-dilam"><span class="ni">💸</span><span class="nl">দিলাম</span></button>
-          <button class="nav-item" onclick="setPage('pelam')" id="nav-pelam"><span class="ni">💰</span><span class="nl">পেলাম</span></button>
-          <button class="nav-item" onclick="setPage('activity')" id="nav-activity"><span class="ni">📋</span><span class="nl">অ্যাক্টিভিটি</span></button>
-          <button class="nav-item" onclick="setPage('recovery')" id="nav-recovery"><span class="ni">♻️</span><span class="nl">রিকভারি</span></button>
+          <button class="nav-item active" onclick="setPage('home')" id="nav-home"><span class="ni">🏠</span><span class="nl">HOME</span></button>
+          <button class="nav-item" onclick="setPage('dilam')" id="nav-dilam"><span class="ni">💸</span><span class="nl">DILAM</span></button>
+          <button class="nav-item" onclick="setPage('pelam')" id="nav-pelam"><span class="ni">💰</span><span class="nl">PELAM</span></button>
+          <button class="nav-item" onclick="setPage('activity')" id="nav-activity"><span class="ni">📋</span><span class="nl">ACTIVITY</span></button>
+          <button class="nav-item" onclick="setPage('recovery')" id="nav-recovery"><span class="ni">♻️</span><span class="nl">RECOVERY</span></button>
         </nav>
       </div>
 
       <!-- ══ MODALS ══ -->
 
-      <!-- দিলাম modal -->
+      <!-- Dilam modal -->
       <div class="modal-overlay" id="modal-dilam" onclick="closeModal('modal-dilam')" style="display:none">
         <div class="modal-box" onclick="event.stopPropagation()">
           <div class="modal-handle"></div>
-          <div class="modal-title">💸 টাকা দিলাম</div>
+          <div class="modal-title">💸 Dilam (Money Sent)</div>
           <div class="modal-sub">NEW OUTGOING ENTRY</div>
-          <div class="field"><label>পরিমাণ (৳)</label><input class="inp" id="dilam-amount" type="number" min="0" step="0.01" placeholder="০.০০" oninput="calcDilamAmount()"/></div>
-          <div class="field"><label>বিবরণ (ঐচ্ছিক)</label><input class="inp" id="dilam-note" type="text" placeholder="কাকে দিলেন, কী কারণে..."/></div>
+          <div class="field"><label>Amount (৳)</label><input class="inp" id="dilam-amount" type="number" min="0" step="0.01" placeholder="0.00" oninput="calcDilamAmount()"/></div>
+          <div class="field"><label>Note (Optional)</label><input class="inp" id="dilam-note" type="text" placeholder="To whom, reason..."/></div>
           <div class="field">
-            <label>মাধ্যম নির্বাচন করুন</label>
-            <select class="inp" id="dilam-provider" onchange="calcDilamAmount()" style="cursor:pointer;appearance:auto">
-              <option value="normal">স্বাভাবিক (Normal)</option>
-              <option value="bkash">বিকাশ ক্যাশ আউট (+১.৮৫%)</option>
-              <option value="nagad">নগদ ক্যাশ আউট (+১.৩%)</option>
+            <label>Cash Out Method</label>
+            <select class="inp" id="dilam-type" onchange="calcDilamAmount()" style="cursor:pointer;appearance:auto">
+              <option value="nagad">Nagad Cash Out (+1.3%)</option>
+              <option value="bkash">bKash Cash Out (+1.85%)</option>
             </select>
           </div>
           <div class="comm-display" id="dilam-cashout-display" style="display:none">
-            <span style="opacity:0.7" id="dilam-cashout-label">ক্যাশ আউট চার্জ</span>
-            <span id="dilam-cashout-val" style="font-size:13px">৳০.০০</span>
+            <span style="opacity:0.7">Cash Out Charge</span>
+            <span id="dilam-cashout-val" style="font-size:13px">৳0.00</span>
           </div>
           <div style="display:flex;gap:10px;margin-top:10px">
-            <button class="btn btn-ghost" style="flex:1" onclick="closeModal('modal-dilam')">বাতিল</button>
-            <button class="btn btn-primary" style="flex:2" id="dilam-save-btn" onclick="saveDilam()">✅ সংরক্ষণ</button>
+            <button class="btn btn-ghost" style="flex:1" onclick="closeModal('modal-dilam')">Cancel</button>
+            <button class="btn btn-primary" style="flex:2" id="dilam-save-btn" onclick="saveDilam()">✅ Save</button>
           </div>
         </div>
       </div>
 
-      <!-- পেলাম modal -->
+      <!-- Pelam modal -->
       <div class="modal-overlay" id="modal-pelam" onclick="closeModal('modal-pelam')" style="display:none">
         <div class="modal-box" onclick="event.stopPropagation()">
           <div class="modal-handle"></div>
-          <div class="modal-title">💰 টাকা পেলাম</div>
+          <div class="modal-title">💰 Pelam (Money Received)</div>
           <div class="modal-sub">NEW INCOMING ENTRY</div>
           <div class="field">
-            <label>পরিমাণ (৳)</label>
-            <input class="inp" id="pelam-amount" type="number" min="0" step="0.01" placeholder="০.০০" oninput="calcCommission()"/>
-            <!-- ✅ commission display (read-only, auto) -->
+            <label>Amount (৳)</label>
+            <input class="inp" id="pelam-amount" type="number" min="0" step="0.01" placeholder="0.00" oninput="calcCommission()"/>
             <div class="comm-display" id="comm-display">
-              <span id="comm-display-type" style="opacity:0.7">কমিশন হার</span>
-              <span id="comm-display-val" style="font-size:14px">৳০.০০</span>
+              <span id="comm-display-type" style="opacity:0.7">Commission Rate</span>
+              <span id="comm-display-val" style="font-size:14px">৳0.00</span>
             </div>
           </div>
-          <div class="field"><label>বিবরণ (ঐচ্ছিক)</label><input class="inp" id="pelam-note" type="text" placeholder="কে দিল, কী কারণে..."/></div>
+          <div class="field"><label>Note (Optional)</label><input class="inp" id="pelam-note" type="text" placeholder="From whom, reason..."/></div>
           <div style="display:flex;gap:10px;margin-top:10px">
-            <button class="btn btn-ghost" style="flex:1" onclick="closeModal('modal-pelam')">বাতিল</button>
-            <button class="btn btn-blue" style="flex:2" id="pelam-save-btn" onclick="savePelam()">✅ সংরক্ষণ</button>
+            <button class="btn btn-ghost" style="flex:1" onclick="closeModal('modal-pelam')">Cancel</button>
+            <button class="btn btn-blue" style="flex:2" id="pelam-save-btn" onclick="savePelam()">✅ Save</button>
           </div>
         </div>
       </div>
@@ -404,11 +402,11 @@ body::after{content:'';position:fixed;inset:0;z-index:0;
       <div class="modal-overlay center" id="modal-logout" onclick="closeModal('modal-logout')" style="display:none">
         <div class="modal-box center-box" onclick="event.stopPropagation()" style="text-align:center">
           <div style="font-size:40px;margin-bottom:10px">🚪</div>
-          <div class="modal-title">লগআউট করবেন?</div>
-          <p style="font-size:11px;color:var(--text3);margin-bottom:18px;font-family:'Share Tech Mono',monospace">আপনার সমস্ত ডেটা সেভ থাকবে।</p>
+          <div class="modal-title">Logout?</div>
+          <p style="font-size:11px;color:var(--text3);margin-bottom:18px;font-family:'Share Tech Mono',monospace">All your data will be saved.</p>
           <div style="display:flex;gap:10px">
-            <button class="btn btn-ghost" style="flex:1" onclick="closeModal('modal-logout')">না</button>
-            <button class="btn btn-danger" style="flex:1" onclick="doLogout()">লগআউট</button>
+            <button class="btn btn-ghost" style="flex:1" onclick="closeModal('modal-logout')">No</button>
+            <button class="btn btn-danger" style="flex:1" onclick="doLogout()">Logout</button>
           </div>
         </div>
       </div>
@@ -417,13 +415,13 @@ body::after{content:'';position:fixed;inset:0;z-index:0;
       <div class="pass-modal" id="pass-modal">
         <div class="pass-box">
           <div style="font-size:34px;margin-bottom:8px" id="pass-modal-icon">🔐</div>
-          <div style="font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;font-family:'Rajdhani',sans-serif;letter-spacing:1px" id="pass-modal-title">পাসওয়ার্ড নিশ্চিত করুন</div>
-          <p style="font-size:10px;color:var(--text3);margin-bottom:14px;font-family:'Share Tech Mono',monospace" id="pass-modal-sub">ডিলিট করতে পাসওয়ার্ড দিন</p>
-          <input class="inp" id="confirm-pass" type="password" placeholder="পাসওয়ার্ড" onkeydown="if(event.key==='Enter')confirmDelete()"/>
+          <div style="font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;font-family:'Rajdhani',sans-serif;letter-spacing:1px" id="pass-modal-title">Confirm Password</div>
+          <p style="font-size:10px;color:var(--text3);margin-bottom:14px;font-family:'Share Tech Mono',monospace" id="pass-modal-sub">Enter password to delete</p>
+          <input class="inp" id="confirm-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')confirmDelete()"/>
           <div class="err-msg" id="confirm-err" style="margin-top:8px;text-align:left"></div>
           <div style="display:flex;gap:8px;margin-top:12px">
-            <button class="btn btn-ghost btn-sm" style="flex:1" onclick="cancelDelete()">বাতিল</button>
-            <button class="btn btn-danger" style="flex:1;padding:9px" id="confirm-del-btn" onclick="confirmDelete()">🗑️ ডিলিট</button>
+            <button class="btn btn-ghost btn-sm" style="flex:1" onclick="cancelDelete()">Cancel</button>
+            <button class="btn btn-danger" style="flex:1;padding:9px" id="confirm-del-btn" onclick="confirmDelete()">🗑️ Delete</button>
           </div>
         </div>
       </div>
@@ -509,11 +507,11 @@ async function doLogin(){
   const pass=document.getElementById('l-pass').value;
   const btn=document.getElementById('l-btn');
   const err=document.getElementById('l-err');
-  if(!email||!pass){showErr(err,'ইমেইল এবং পাসওয়ার্ড দিন');return;}
-  btn.disabled=true;btn.innerHTML='<span class="loader"></span> লোড হচ্ছে...';err.classList.remove('show');
+  if(!email||!pass){showErr(err,'Enter email and password');return;}
+  btn.disabled=true;btn.innerHTML='<span class="loader"></span> Loading...';err.classList.remove('show');
   try{await auth.signInWithEmailAndPassword(email,pass);}
-  catch(e){const m={'auth/user-not-found':'এই ইমেইলে অ্যাকাউন্ট নেই','auth/wrong-password':'পাসওয়ার্ড ভুল','auth/invalid-credential':'ইমেইল বা পাসওয়ার্ড ভুল','auth/invalid-email':'ইমেইল সঠিক নয়','auth/too-many-requests':'অনেকবার চেষ্টা হয়েছে'};showErr(err,m[e.code]||e.message);}
-  btn.disabled=false;btn.innerHTML='🔑 লগইন';
+  catch(e){const m={'auth/user-not-found':'No account with this email','auth/wrong-password':'Wrong password','auth/invalid-credential':'Email or password incorrect','auth/invalid-email':'Email is not valid','auth/too-many-requests':'Too many attempts'};showErr(err,m[e.code]||e.message);}
+  btn.disabled=false;btn.innerHTML='🔑 Login';
 }
 
 async function doRegister(){
@@ -522,12 +520,12 @@ async function doRegister(){
   const pass=document.getElementById('r-pass').value;
   const btn=document.getElementById('r-btn');
   const err=document.getElementById('r-err');
-  if(!name){showErr(err,'নাম দিন');return;}
-  if(!email){showErr(err,'ইমেইল দিন');return;}
-  if(pass.length<6){showErr(err,'পাসওয়ার্ড কমপক্ষে ৬ অক্ষর');return;}
-  btn.disabled=true;btn.innerHTML='<span class="loader"></span> তৈরি হচ্ছে...';err.classList.remove('show');
+  if(!name){showErr(err,'Enter your name');return;}
+  if(!email){showErr(err,'Enter email');return;}
+  if(pass.length<6){showErr(err,'Password must be at least 6 characters');return;}
+  btn.disabled=true;btn.innerHTML='<span class="loader"></span> Creating...';err.classList.remove('show');
   try{const c=await auth.createUserWithEmailAndPassword(email,pass);await c.user.updateProfile({displayName:name});}
-  catch(e){const m={'auth/email-already-in-use':'এই ইমেইলে অ্যাকাউন্ট আছে','auth/weak-password':'পাসওয়ার্ড শক্তিশালী করুন','auth/invalid-email':'ইমেইল সঠিক নয়'};showErr(err,m[e.code]||e.message);btn.disabled=false;btn.innerHTML='✅ রেজিস্টার';}
+  catch(e){const m={'auth/email-already-in-use':'Account already exists with this email','auth/weak-password':'Use a stronger password','auth/invalid-email':'Email is not valid'};showErr(err,m[e.code]||e.message);btn.disabled=false;btn.innerHTML='✅ Register';}
 }
 
 function doLogout(){closeModal('modal-logout');auth.signOut();}
@@ -576,9 +574,9 @@ function calcTotals(){
   const totalDilam=allDilam.reduce((s,r)=>s+(r.amount||0),0);
   const totalPelam=allPelam.reduce((s,r)=>s+(r.amount||0),0);
   const totalComm=allPelam.reduce((s,r)=>s+(r.commission||0),0);
-  const totalComm35=allPelam.reduce((s,r)=>s+(r.commission||0),0); // now all 1%
-  const totalComm1=allPelam.filter(r=>r.commType==='1%').reduce((s,r)=>s+(r.commission||0),0);
-  return{totalDilam,totalPelam,totalComm,totalComm35,totalComm1};
+  const totalNagadCharge=allDilam.filter(r=>r.dilamType==='nagad').reduce((s,r)=>s+(r.cashoutCharge||0),0);
+  const totalBkashCharge=allDilam.filter(r=>r.dilamType==='bkash').reduce((s,r)=>s+(r.cashoutCharge||0),0);
+  return{totalDilam,totalPelam,totalComm,totalNagadCharge,totalBkashCharge};
 }
 
 // ═══ RENDER HOME ═══
@@ -658,8 +656,8 @@ function renderPelam(){
     </div>
     <button class="btn btn-blue btn-sm" onclick="openPelam()">+ নতুন</button>
   </div>
-  <div style="display:grid;grid-template-columns:1fr;gap:7px;margin-bottom:12px">
-    ${(()=>{const t=allPelam.reduce((s,r)=>s+(r.commission||0),0);return`<div style="background:var(--gold-bg);border:1px solid var(--gold-bdr);border-radius:11px;padding:11px;text-align:center"><p style="font-size:8px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:'Share Tech Mono',monospace">১% কমিশন (সব এন্ট্রি)</p><p style="font-size:15px;font-weight:800;color:var(--gold);font-family:'Share Tech Mono',monospace">${fmtBn(t)}</p><p style="font-size:9px;color:var(--text3)">${allPelam.length} এন্ট্রি</p></div>`;})()}
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px">
+    ${['2%','1%'].map(ct=>{const items=allPelam.filter(r=>r.commType===ct);const t=items.reduce((s,r)=>s+(r.commission||0),0);return`<div style="background:var(--gold-bg);border:1px solid var(--gold-bdr);border-radius:11px;padding:11px;text-align:center"><p style="font-size:8px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-family:'Share Tech Mono',monospace">${ct} কমিশন</p><p style="font-size:15px;font-weight:800;color:var(--gold);font-family:'Share Tech Mono',monospace">${fmtBn(t)}</p><p style="font-size:9px;color:var(--text3)">${items.length} এন্ট্রি</p></div>`;}).join('')}
   </div>
   ${allPelam.length===0?`<div class="empty"><div class="ei">💰</div><p>এখনো কোনো এন্ট্রি নেই</p></div>`:`<div class="hist-card">${allPelam.map(r=>histItem({...r,kind:'pelam'},true)).join('')}</div>`}
   </div>`;
@@ -719,7 +717,7 @@ function renderRecoveryContent(container){
 function openDilam(){
   document.getElementById('dilam-amount').value='';
   document.getElementById('dilam-note').value='';
-  document.getElementById('dilam-provider').value='normal';
+  document.getElementById('dilam-type').value='normal';
   document.getElementById('dilam-cashout-display').style.display='none';
   openModal('modal-dilam');
   setTimeout(()=>document.getElementById('dilam-amount').focus(),300);
@@ -727,18 +725,11 @@ function openDilam(){
 
 function calcDilamAmount(){
   const amt=parseFloat(document.getElementById('dilam-amount').value)||0;
-  const provider=document.getElementById('dilam-provider').value;
+  const type=document.getElementById('dilam-type').value;
   const disp=document.getElementById('dilam-cashout-display');
-  if(provider==='bkash'&&amt>0){
+  if(type==='cashout'&&amt>0){
     const charge=+(amt*0.0185).toFixed(2);
     const total=+(amt+charge).toFixed(2);
-    document.getElementById('dilam-cashout-label').textContent='বিকাশ চার্জ (১.৮৫%)';
-    document.getElementById('dilam-cashout-val').textContent='চার্জ: ৳'+fmtNum(charge)+' → মোট: ৳'+fmtNum(total);
-    disp.style.display='flex';
-  } else if(provider==='nagad'&&amt>0){
-    const charge=+(amt*0.013).toFixed(2);
-    const total=+(amt+charge).toFixed(2);
-    document.getElementById('dilam-cashout-label').textContent='নগদ চার্জ (১.৩%)';
     document.getElementById('dilam-cashout-val').textContent='চার্জ: ৳'+fmtNum(charge)+' → মোট: ৳'+fmtNum(total);
     disp.style.display='flex';
   } else {
@@ -749,18 +740,14 @@ function calcDilamAmount(){
 async function saveDilam(){
   const rawAmt=parseFloat(document.getElementById('dilam-amount').value);
   const note=document.getElementById('dilam-note').value.trim();
-  const provider=document.getElementById('dilam-provider').value;
+  const type=document.getElementById('dilam-type').value;
   if(!rawAmt||isNaN(rawAmt)||rawAmt<=0){toast('পরিমাণ সঠিকভাবে দিন','red');return;}
-  let amt=rawAmt;
-  let dilamType='normal';
-  if(provider==='bkash'){amt=+(rawAmt*1.0185).toFixed(2);dilamType='bkash';}
-  else if(provider==='nagad'){amt=+(rawAmt*1.013).toFixed(2);dilamType='nagad';}
+  const amt=type==='cashout'?+(rawAmt*1.0185).toFixed(2):rawAmt;
   const btn=document.getElementById('dilam-save-btn');
   btn.disabled=true;btn.innerHTML='<span class="loader"></span> সংরক্ষণ...';
   try{
-    await dilamRef().add({amount:amt,note,dilamType,createdAt:firebase.firestore.FieldValue.serverTimestamp()});
-    const msg=provider==='bkash'?'✅ বিকাশ ক্যাশ আউট (১.৮৫% যোগ)':provider==='nagad'?'✅ নগদ ক্যাশ আউট (১.৩% যোগ)':'✅ টাকা দিলাম এন্ট্রি যোগ হয়েছে';
-    toast(msg);
+    await dilamRef().add({amount:amt,note,dilamType:type,createdAt:firebase.firestore.FieldValue.serverTimestamp()});
+    toast(type==='cashout'?'✅ ক্যাশ আউট এন্ট্রি যোগ হয়েছে (১.৮৫% যোগ)':'✅ টাকা দিলাম এন্ট্রি যোগ হয়েছে');
     closeModal('modal-dilam');
   }catch(e){toast('সমস্যা: '+e.message,'red');}
   btn.disabled=false;btn.innerHTML='✅ সংরক্ষণ';
@@ -776,13 +763,14 @@ function openPelam(){
   setTimeout(()=>document.getElementById('pelam-amount').focus(),300);
 }
 
-// ✅ Commission is READ-ONLY auto-calculated — flat 1% any amount
+// ✅ Commission is READ-ONLY auto-calculated, no manual input
 function calcCommission(){
   const amt=parseFloat(document.getElementById('pelam-amount').value)||0;
   const disp=document.getElementById('comm-display');
   if(amt<=0){disp.classList.remove('show');_autoComm=0;_autoCommType='';return;}
-  _autoCommType='1%';_autoComm=+(amt*0.01).toFixed(2);
-  document.getElementById('comm-display-type').textContent='১% হারে কমিশন';
+  if(amt>=5000){_autoCommType='1%';_autoComm=+(amt*0.01).toFixed(2);}
+  else{_autoCommType='2%';_autoComm=+(amt*0.02).toFixed(2);}
+  document.getElementById('comm-display-type').textContent=_autoCommType+' হারে কমিশন';
   document.getElementById('comm-display-val').textContent='৳'+fmtNum(_autoComm);
   disp.classList.add('show');
 }
@@ -966,7 +954,7 @@ function histItem(r,showDelete){
   <div class="hist-body">
     <div class="hist-title">${isD?'দিলাম':'পেলাম'}${noteText}</div>
     <div class="hist-sub">${fmtDate(dt)}</div>
-    ${isD&&r.dilamType==='bkash'?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">বিকাশ ক্যাশ আউট <span class="badge badge-gold">+১.৮৫%</span></div>`:isD&&r.dilamType==='nagad'?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">নগদ ক্যাশ আউট <span class="badge badge-gold">+১.৩%</span></div>`:isD&&r.dilamType==='cashout'?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">ক্যাশ আউট <span class="badge badge-gold">+১.৮৫%</span></div>`:''}
+    ${isD&&r.dilamType==='cashout'?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">ক্যাশ আউট <span class="badge badge-gold">+১.৮৫%</span></div>`:''}
     ${!isD&&r.commission?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">কমিশন: ${fmtBn(r.commission)} <span class="badge badge-gold">${r.commType||''}</span></div>`:''}
   </div>
   <div class="hist-right">
@@ -985,7 +973,7 @@ function recoveryItemHtml(r){
   <div class="hist-body">
     <div class="hist-title">${isD?'দিলাম':'পেলাম'}: ${fmtBn(r.amount||0)}${r.note?' — '+esc(r.note):''}</div>
     <div class="hist-sub" style="color:var(--red)">মুছেছেন: ${fmtDate(dt)}</div>
-    ${isD&&r.dilamType==='bkash'?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">বিকাশ ক্যাশ আউট <span class="badge badge-gold">+১.৮৫%</span></div>`:isD&&r.dilamType==='nagad'?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">নগদ ক্যাশ আউট <span class="badge badge-gold">+১.৩%</span></div>`:isD&&r.dilamType==='cashout'?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">ক্যাশ আউট <span class="badge badge-gold">+১.৮৫%</span></div>`:''}
+    ${isD&&r.dilamType==='cashout'?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">ক্যাশ আউট <span class="badge badge-gold">+১.৮৫%</span></div>`:''}
     ${!isD&&r.commission?`<div style="font-size:9px;color:var(--gold);margin-top:1px;font-family:'Share Tech Mono',monospace">কমিশন: ${fmtBn(r.commission)}</div>`:''}
   </div>
   <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end;flex-shrink:0;margin-left:6px">
@@ -1004,7 +992,7 @@ function showDetail(id,kind){
   const dt=item.createdAt?.toDate?.()??new Date(item.createdAt??Date.now());
   const rows=[
     ['পরিমাণ',fmtBn(item.amount||0),isD?'var(--green)':'var(--accent)'],
-    ...(isD&&item.dilamType==='bkash'?[['মাধ্যম','বিকাশ ক্যাশ আউট (+১.৮৫%)','var(--gold)']]: isD&&item.dilamType==='nagad'?[['মাধ্যম','নগদ ক্যাশ আউট (+১.৩%)','var(--gold)']]: isD&&item.dilamType==='cashout'?[['মাধ্যম','ক্যাশ আউট (+১.৮৫%)','var(--gold)']]: isD?[['মাধ্যম','স্বাভাবিক','var(--text2)']]: []),
+    ...(isD&&item.dilamType==='cashout'?[['ধরন','ক্যাশ আউট (+১.৮৫%)','var(--gold)']]: isD?[['ধরন','স্বাভাবিক','var(--text2)']]: []),
     ...(!isD&&item.commission?[['কমিশন',fmtBn(item.commission),'var(--gold)'],['কমিশন %',item.commType||'—','var(--gold)']]:[] ),
     ...(item.note?[['বিবরণ',esc(item.note),'var(--text)']]: []),
     ['তারিখ',fmtDate(dt,true),'var(--text2)'],
